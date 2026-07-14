@@ -1,0 +1,13 @@
+Sub CopySheetMultipleTimes()
+    Dim i As Integer
+    Dim n As Integer
+    Dim baseName As String
+    
+    n = 87   ' <-- how many new sheets you want
+    baseName = "3"   ' <-- source sheet name
+    
+    For i = 1 To n
+        Sheets(baseName).Copy After:=Sheets(Sheets.Count)
+        ActiveSheet.Name = 3 + i
+    Next i
+End Sub
